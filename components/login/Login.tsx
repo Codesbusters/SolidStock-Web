@@ -6,7 +6,7 @@ import error = Simulate.error;
 import {MailIcon} from "@nextui-org/shared-icons";
 import {Link} from "@nextui-org/link";
 
-export default function Loggin() {
+export default function Login() {
 
     return (
         <div className="w-full flex justify-center h-screen">

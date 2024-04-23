@@ -1,12 +1,12 @@
 'use client';
 
 
-import Loggin from "@/components/loggin/Loggin";
+import Login from "@/components/login/Login";
 
 export default function Preferences() {
     return (
         <div>
-            <Loggin />
+            <Login />
         </div>
     );
 }
