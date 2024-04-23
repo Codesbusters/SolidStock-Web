@@ -82,6 +82,7 @@ export default function ShopNavbar() {
                             </DropdownItem>
                             <DropdownItem key="settings" ><Link href={"/myAccount"}>Mon compte</Link></DropdownItem>
                             <DropdownItem key="help_and_feedback">Besoin d'aide</DropdownItem>
+                            <DropdownItem key="login"><Link href={"/loggin"}> Se connecter</Link> </DropdownItem>
                             <DropdownItem key="logout" color="danger">
                                 Se déconnecter
                             </DropdownItem>
