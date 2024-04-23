@@ -41,14 +41,14 @@ export default function RootLayout({
 					fontSans.variable
 				)}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col h-screen w-full">
-						<ShopNavbar />
+			<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+					<div className="flex flex-col h-full w-full">
+						<ShopNavbar/>
 						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow h-1/2 flex flex-row">
 							<div className={"h-full"}>
-								<SideMenu />
+								<SideMenu/>
 							</div>
-							<div>
+							<div className={"w-full"}>
 								{children}
 							</div>
 						</main>

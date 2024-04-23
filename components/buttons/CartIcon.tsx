@@ -1,16 +1,38 @@
 import {Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger} from "@nextui-org/react";
-import React from "react";
-import {BiCart} from "react-icons/bi";
+import React, {useEffect, useState} from "react";
+import cartManager from "../../functions/cart";
 import {CiShoppingCart} from "react-icons/ci";
+import {Badge} from "@nextui-org/badge";
+import cart from "../../functions/cart";
 
 
 export default function CartIcon() {
+
+    const [cartSize, setCartSize] = useState(cartManager.getCartSize());
+
+    useEffect(() => {
+        const handleCartChange = () => {
+            setCartSize(cartManager.getCartSize());
+        };
+
+        // Listen for the custom event
+        window.addEventListener('cartChanged', handleCartChange);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('cartChanged', handleCartChange);
+        };
+    }, []);
+
     return (
+        <Badge content={cartSize} size={"lg"} color="primary">
         <Dropdown placement="bottom-end">
             <DropdownTrigger>
-                <Button isIconOnly={true} variant="light"  className="h-14">
+
+                <Button isIconOnly={true} variant="light" >
                 <CiShoppingCart size={32} />
                 </Button>
+
             </DropdownTrigger>
             <DropdownMenu aria-label="Profile Actions" variant="flat">
                 <DropdownItem key="profile" className="h-14 gap-2">
@@ -28,5 +50,6 @@ export default function CartIcon() {
                 </DropdownItem>
             </DropdownMenu>
         </Dropdown>
+        </Badge>
     );
 }
