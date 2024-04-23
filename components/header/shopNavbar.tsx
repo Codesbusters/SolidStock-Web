@@ -81,7 +81,7 @@ export default function ShopNavbar() {
                                <p className="font-semibold">Jean Lasalle</p>
                            </DropdownItem>
                            <DropdownItem key="settings">Mon compte</DropdownItem>
-                           <DropdownItem key="help_and_feedback">Besoin d'aide</DropdownItem>
+                           <DropdownItem key="help_and_feedback"><Link className={"text-small"} href={"/contact"} color={"secondary"}>Besoin d'aide ?</Link></DropdownItem>
                            <DropdownItem key="logout" color="danger">
                                Se déconnecter
                            </DropdownItem>
