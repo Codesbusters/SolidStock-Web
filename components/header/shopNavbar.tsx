@@ -84,7 +84,7 @@ export default function ShopNavbar() {
                            <DropdownItem key="help_and_feedback"><Link className={"text-small"} href={"/contact"} color={"secondary"}>Besoin d'aide ?</Link></DropdownItem>
                            <DropdownItem key="login"><Link className={"text-small"} href={"/login"} color={"secondary"}>Se connecter</Link></DropdownItem>
                            <DropdownItem key="logout" color="danger">
-                               Se déconnecter
+                               <Link className={"text-small"} href={"/logout"} color={"secondary"}>Se déconnecter</Link>
                            </DropdownItem>
                        </DropdownMenu>
                    </Dropdown>
