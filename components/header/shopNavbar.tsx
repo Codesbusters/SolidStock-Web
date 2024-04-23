@@ -80,8 +80,9 @@ export default function ShopNavbar() {
                            <DropdownItem key="profile" className="h-14 gap-2">
                                <p className="font-semibold">Jean Lasalle</p>
                            </DropdownItem>
-                           <DropdownItem key="settings">Mon compte</DropdownItem>
+                           <DropdownItem key="settings"><Link className={"text-small"} href={"/myAccount"} color={"secondary"}>Mon compte</Link></DropdownItem>
                            <DropdownItem key="help_and_feedback"><Link className={"text-small"} href={"/contact"} color={"secondary"}>Besoin d'aide ?</Link></DropdownItem>
+                           <DropdownItem key="login"><Link className={"text-small"} href={"/login"} color={"secondary"}>Se connecter</Link></DropdownItem>
                            <DropdownItem key="logout" color="danger">
                                Se déconnecter
                            </DropdownItem>
